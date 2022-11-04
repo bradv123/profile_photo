@@ -1,7 +1,16 @@
 name: profile_photo
 description: A simple Flutter package to display a profile photo with a badge
 version: 0.0.1
-homepage:
+homepage: https://github.com/bradv123/profile_photo
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.bradvarnum.profile_photo
+        pluginClass: ProfilePhoto
+      ios:
+        pluginClass: ProfilePhoto
 
 environment:
   sdk: ">=2.16.2 <3.0.0"
@@ -14,13 +23,13 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^1.0.0
+  # flutter_lints: ^1.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
 # The following section is specific to Flutter.
-flutter:
+# flutter:
 
   # To add assets to your package, add an assets section, like this:
   # assets:
