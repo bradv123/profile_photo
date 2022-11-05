@@ -1,36 +1,54 @@
-<!-- 
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# profile_photo
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages). 
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages). 
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+Creates a widget that was designed to be used to display a profile photo, but it could also be used in many other ways
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- Ability to add a custom badge to the widget, could be used to display premium users for example
+- Will automatically figure out a users initals to display if no image is given, but a name is
+- ImageProvider as an image source to use either network or asset images
+- onTap and onLongPress call backs
+- Adjustable size
+- Adjustable corner radius
+- Adjustable outline width
+- Adjustable background and outline colors
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+Add the dependency and add anywhere in widget tree
 
 ## Usage
 
 TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
+to `/example` folder.
 
 ```dart
-const like = 'sample';
+ProfilePhoto(
+    totalWidth: 200,
+    cornerRadius: 25,
+    color: Colors.blue,
+    outlineColor: Colors.red,
+    outlineWidth: 10,
+    textPadding: 10,
+    name: 'Brad Varnum',
+    fontColor: Colors.white,
+    nameDisplayOption: NameDisplayOptions.initials,
+    fontWeight: FontWeight.w100,
+    showName: true,
+    image: const AssetImage('assets/test_profile_photo.jpg'),
+    badgeAlignment: Alignment.bottomLeft,
+    badgeSize: 60,
+    badgeImage: const AssetImage('assets/star.png'),
+    onTap: () {
+        // open profile for example
+    },
+    onLongPress: () {
+        // popup to message user for example
+    },
+),
 ```
+
+![exmaple photo](https://raw.githubusercontent.com/bradv123/profile_photo/master/readme_images/example_screenshot.png)
 
 ## Additional information
 
