@@ -19,9 +19,6 @@ Add the dependency and add anywhere in widget tree
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
 ```dart
 ProfilePhoto(
     totalWidth: 200,
