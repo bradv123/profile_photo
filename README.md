@@ -19,6 +19,19 @@ Add the dependency and add anywhere in widget tree
 
 ## Usage
 
+Minimum required code for a simple round photo (2nd example)
+
+```dart
+ProfilePhoto(
+    totalWidth: 100,
+    cornerRadius: 80,
+    color: Colors.blue,
+    image: const AssetImage('assets/test_profile_photo.jpg'),
+),
+```
+
+More complicated example with initals shown, custom boarder and colors, and badge (3rd example)
+
 ```dart
 ProfilePhoto(
     totalWidth: 200,
@@ -45,7 +58,8 @@ ProfilePhoto(
 ),
 ```
 
-![exmaple photo](https://raw.githubusercontent.com/bradv123/profile_photo/master/readme_images/example_screenshot.png)
+<img src="https://raw.githubusercontent.com/bradv123/profile_photo/master/readme_images/example_screenshot.png" alt="example image" width="300"/>
+
 
 ## Additional information
 

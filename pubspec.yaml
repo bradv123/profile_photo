@@ -1,6 +1,6 @@
 name: profile_photo
 description: A simple Flutter package to display a profile photo with a badge
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/bradv123/profile_photo
 
 environment:
