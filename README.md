@@ -52,6 +52,6 @@ ProfilePhoto(
 
 ## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+- Feel free to use as-is or fork and modify for what you need
+- If you find any issues, please create a issue in this repo
+- I made this mostly for fun, and explore the package creation process
