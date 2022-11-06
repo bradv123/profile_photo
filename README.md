@@ -60,9 +60,9 @@ ProfilePhoto(
 
 <img src="https://raw.githubusercontent.com/bradv123/profile_photo/master/readme_images/example_screenshot.png" alt="example image" width="300"/>
 
-
 ## Additional information
 
 - Feel free to use as-is or fork and modify for what you need
 - If you find any issues, please create a issue in this repo
+- If you have any suggestions or feature requests, please create an issue
 - I made this mostly for fun, and explore the package creation process

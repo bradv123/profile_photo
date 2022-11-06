@@ -1,23 +1,58 @@
 import 'package:flutter/material.dart';
 
 class ProfilePhoto extends StatelessWidget {
+  /// Sets the total width and height of the widget.
   final double totalWidth;
+
+  /// Sets the width of the outer edge of the ProfilePhoto. Default is 0. (inset from totalWidth).
   final int outlineWidth;
+
+  /// Sets the radius of ProfilePhoto. Defualt is 10. (for a circle set equal to totalWidth).
   final double cornerRadius;
+
+  /// Sets the color of the outer edge. If outlineWidth == 0, this doesn't do anything.
   final Color outlineColor;
+
+  /// Sets the main color to show if there is no image.
   final Color color;
+
+  /// onTap callback.
   final VoidCallback? onTap;
+
+  /// onLongPress callback.
   final VoidCallback? onLongPress;
+
+  /// users name, which can be showed or not in various ways using nameDisplayOptions.
   final String name;
+
+  /// Font to use if a name is visible.
   final String? fontFamily;
+
+  /// Font color to use if a name is visible.
   final Color? fontColor;
+
+  /// Sets various ways a name can be shown. Defualt is initials.
   final NameDisplayOptions? nameDisplayOption;
+
+  /// Sets the font weight of the name if visible.
   final FontWeight? fontWeight;
+
+  /// Sets spacing (top, right, bottom & left) around name if its visible. Defualt is 10.
   final int textPadding;
+
+  /// Image to be displayed.
   final ImageProvider? image;
+
+  /// Bool to set if the name should be visible. By default, true if there is no image, false if there is an image set.
   final bool? showName;
+
+  /// Image to be shown as a badge in the corner of the ProfilePhoto.
   final ImageProvider? badgeImage;
+
+  /// Size of the badge. Default is 0.
   final double badgeSize;
+
+  /// Alignment of the badge. Default is bottom right.
   final Alignment badgeAlignment;
 
   ProfilePhoto({
@@ -81,7 +116,7 @@ class ProfilePhoto extends StatelessWidget {
         _textToShow = name;
         break;
       case NameDisplayOptions.splitFullName:
-        _textToShow = '${_firstName}\r\n${_lastName}';
+        _textToShow = '$_firstName\r\n$_lastName';
         break;
       default:
         _textToShow = ' ';
@@ -159,6 +194,7 @@ class ProfilePhoto extends StatelessWidget {
                 ),
               ),
             ),
+          // if there is a badgeImage to show
           if (badgeImage != null)
             Container(
               width: totalWidth,
@@ -178,6 +214,13 @@ class ProfilePhoto extends StatelessWidget {
   }
 }
 
+/// Display options for nameDisplayOption
+///
+/// firstName only shows the first name.
+/// lastName only shows the last name.
+/// splitFullName shows first name and last name on 2 lines.
+/// initals shows the users initals.
+/// dontChange shows the name exactly as typed.
 enum NameDisplayOptions {
   firstName,
   lastName,
