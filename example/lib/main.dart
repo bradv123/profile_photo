@@ -53,10 +53,24 @@ class _MyHomePageState extends State<MyHomePage> {
                 fontColor: Colors.white,
                 nameDisplayOption: NameDisplayOptions.initials,
                 fontWeight: FontWeight.w100,
-                badgeSize: 30,
+                // badgeSize: 30,
                 badgeAlignment: Alignment.bottomRight,
                 image: const AssetImage('assets/test_profile_photo.jpg'),
-                badgeImage: const AssetImage('assets/star.png'),
+                // badgeImage: const AssetImage('assets/star.png'),
+                badge: Container(
+                  height: 25,
+                  width: 25,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(200),
+                    color: Colors.grey,
+                  ),
+                  alignment: Alignment.center,
+                  child: Icon(
+                    Icons.add_alarm_outlined,
+                    size: 15,
+                    color: Colors.white,
+                  ),
+                ),
                 onTap: () {
                   // open profile
                 },
@@ -86,8 +100,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 showName: true,
                 image: const AssetImage('assets/test_profile_photo.jpg'),
                 badgeAlignment: Alignment.bottomLeft,
-                badgeSize: 60,
-                badgeImage: const AssetImage('assets/star.png'),
+                // badgeSize: 60,
+                // badgeImage: const AssetImage('assets/star.png'),
+                badge: const Text('Badge'),
                 onTap: () {
                   // open profile
                 },

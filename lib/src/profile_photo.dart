@@ -22,6 +22,9 @@ class ProfilePhoto extends StatelessWidget {
   /// onLongPress callback.
   final VoidCallback? onLongPress;
 
+  /// onLongPress callback.
+  final VoidCallback? onDoubleTap;
+
   /// users name, which can be showed or not in various ways using nameDisplayOptions.
   final String name;
 
@@ -46,11 +49,14 @@ class ProfilePhoto extends StatelessWidget {
   /// Bool to set if the name should be visible. By default, true if there is no image, false if there is an image set.
   final bool? showName;
 
-  /// Image to be shown as a badge in the corner of the ProfilePhoto.
-  final ImageProvider? badgeImage;
+  // /// Image to be shown as a badge in the corner of the ProfilePhoto.
+  // final ImageProvider? badgeImage;
+
+  /// Widget to be shown as a badge in the corner of the ProfilePhoto.
+  final Widget? badge;
 
   /// Size of the badge. Default is 0.
-  final double badgeSize;
+  // final double badgeSize;
 
   /// Alignment of the badge. Default is bottom right.
   final Alignment badgeAlignment;
@@ -63,6 +69,7 @@ class ProfilePhoto extends StatelessWidget {
     this.outlineColor = Colors.lightBlue,
     this.onTap,
     this.onLongPress,
+    this.onDoubleTap,
     this.name = '',
     this.nameDisplayOption = NameDisplayOptions.initials,
     this.fontColor,
@@ -72,8 +79,9 @@ class ProfilePhoto extends StatelessWidget {
     this.image,
     this.showName,
     this.badgeAlignment = Alignment.bottomRight,
-    this.badgeImage,
-    this.badgeSize = 0,
+    // this.badgeImage,
+    this.badge,
+    // this.badgeSize = 0,
     Key? key,
   }) : super(key: key);
 
@@ -132,6 +140,7 @@ class ProfilePhoto extends StatelessWidget {
     return GestureDetector(
       onTap: onTap ?? () {},
       onLongPress: onLongPress ?? () {},
+      onDoubleTap: onDoubleTap ?? () {},
       child: Stack(
         alignment: Alignment.center,
         children: [
@@ -195,16 +204,16 @@ class ProfilePhoto extends StatelessWidget {
               ),
             ),
           // if there is a badgeImage to show
-          if (badgeImage != null)
+          if (badge != null)
             Container(
               width: totalWidth,
               height: totalWidth,
               child: Align(
                 alignment: badgeAlignment,
                 child: Container(
-                  width: badgeSize,
-                  height: badgeSize,
-                  child: badgeImage != null ? Image(image: badgeImage!) : null,
+                  // width: badgeSize,
+                  // height: badgeSize,
+                  child: badge != null ? badge : null,
                 ),
               ),
             ),
